@@ -3,131 +3,443 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FitZone | Fitness Website</title>
+  <title>FitZone | Elite Fitness</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
+  <!-- Cursor -->
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
   <!-- Navigation Bar -->
-  <header>
+  <header id="header">
     <nav class="navbar">
-      <h1 class="logo">FitZone</h1>
+      <div class="logo">
+        <span class="logo-fit">FIT</span><span class="logo-zone">ZONE</span>
+        <div class="logo-line"></div>
+      </div>
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#workout">Workout</a></li>
-        <li><a href="#diet">Diet Plan</a></li>
-        <li><a href="#bmi">BMI Calc</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home" class="nav-link"><span>01</span>Home</a></li>
+        <li><a href="#products" class="nav-link"><span>02</span>Products</a></li>
+        <li><a href="#workout" class="nav-link"><span>03</span>Workout</a></li>
+        <li><a href="#diet" class="nav-link"><span>04</span>Diet</a></li>
+        <li><a href="#bmi" class="nav-link"><span>05</span>BMI</a></li>
+        <li><a href="#contact" class="nav-link"><span>06</span>Contact</a></li>
       </ul>
-      <div class="menu-toggle">&#9776;</div>
+      <a href="#contact" class="nav-cta">JOIN NOW →</a>
+      <div class="menu-toggle">
+        <span></span><span></span><span></span>
+      </div>
     </nav>
   </header>
 
-  <!-- Home Section -->
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#workout">Workout</a></li>
+      <li><a href="#diet">Diet</a></li>
+      <li><a href="#bmi">BMI</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero Section -->
   <section id="home" class="hero">
-    <div class="overlay"></div>
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-glow"></div>
+    </div>
     <div class="hero-content">
-      <h2>Your Fitness Journey Starts Here</h2>
-      <p>Stay Fit, Stay Healthy!</p>
-      <a href="#contact" class="btn">Join Now</a>
+      <div class="hero-tag">ELITE FITNESS CLUB</div>
+      <h1 class="hero-title">
+        <span class="line1">FORGE YOUR</span>
+        <span class="line2 accent">STRENGTH</span>
+        <span class="line3">DEFINE YOUR LEGACY</span>
+      </h1>
+      <p class="hero-sub">Professional training • Proven results • Real transformation</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">Start Training</a>
+        <a href="#workout" class="btn-secondary">View Schedule ↓</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">500+</span><span class="stat-label">Members</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">12+</span><span class="stat-label">Programs</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">5★</span><span class="stat-label">Rating</span></div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>SCROLL</span>
+      <div class="scroll-line"></div>
     </div>
   </section>
 
   <!-- Products Section -->
-  <section id="products">
-    <h2 class="section-title">Gym Products</h2>
-    <div class="product-container">
-      <div class="product-card">
-        <img src="gymp.jpeg" alt="Protein Powder">
-        <h3>Protein Powder</h3>
-        <p>₹2000</p>
-        <button class="btn">Add to Cart</button>
+  <section id="products" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">SHOP</span>
+        <h2 class="section-title">Premium <span class="accent">Products</span></h2>
+        <p>Top-quality gear to power your workouts</p>
       </div>
+      <div class="product-container">
+        <div class="product-card" data-aos>
+          <div class="product-badge">BESTSELLER</div>
+          <div class="product-img-wrap">
+            <div class="product-img-placeholder">
+              <i class="fas fa-dumbbell"></i>
+            </div>
+          </div>
+          <div class="product-info">
+            <span class="product-cat">Supplement</span>
+            <h3>Whey Protein</h3>
+            <div class="product-rating">★★★★★ <span>(124)</span></div>
+            <div class="product-footer">
+              <span class="price">₹2,000</span>
+              <button class="btn-cart"><i class="fas fa-shopping-cart"></i> Add</button>
+            </div>
+          </div>
+        </div>
 
-      <div class="product-card">
-        <img src="dumbleed.jpeg" alt="Dumbbell">
-        <h3>Dumbbell Set</h3>
-        <p>₹1500</p>
-        <button class="btn">Add to Cart</button>
-      </div>
+        <div class="product-card featured" data-aos>
+          <div class="product-badge hot">HOT</div>
+          <div class="product-img-wrap">
+            <div class="product-img-placeholder">
+              <i class="fas fa-weight-hanging"></i>
+            </div>
+          </div>
+          <div class="product-info">
+            <span class="product-cat">Equipment</span>
+            <h3>Dumbbell Set</h3>
+            <div class="product-rating">★★★★★ <span>(89)</span></div>
+            <div class="product-footer">
+              <span class="price">₹1,500</span>
+              <button class="btn-cart"><i class="fas fa-shopping-cart"></i> Add</button>
+            </div>
+          </div>
+        </div>
 
-      <div class="product-card">
-        <img src="rope.jpeg" alt="Skipping Rope">
-        <h3>Skipping Rope</h3>
-        <p>₹500</p>
-        <button class="btn">Add to Cart</button>
+        <div class="product-card" data-aos>
+          <div class="product-img-wrap">
+            <div class="product-img-placeholder">
+              <i class="fas fa-circle-notch"></i>
+            </div>
+          </div>
+          <div class="product-info">
+            <span class="product-cat">Accessories</span>
+            <h3>Skipping Rope</h3>
+            <div class="product-rating">★★★★☆ <span>(67)</span></div>
+            <div class="product-footer">
+              <span class="price">₹500</span>
+              <button class="btn-cart"><i class="fas fa-shopping-cart"></i> Add</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-aos>
+          <div class="product-img-wrap">
+            <div class="product-img-placeholder">
+              <i class="fas fa-hand-rock"></i>
+            </div>
+          </div>
+          <div class="product-info">
+            <span class="product-cat">Accessories</span>
+            <h3>Gym Gloves</h3>
+            <div class="product-rating">★★★★★ <span>(45)</span></div>
+            <div class="product-footer">
+              <span class="price">₹799</span>
+              <button class="btn-cart"><i class="fas fa-shopping-cart"></i> Add</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Workout Section -->
-  <section id="workout">
-    <h2 class="section-title">Workout Schedule</h2>
-    <table class="workout-table">
-      <tr><th>Day</th><th>Workout</th></tr>
-      <tr><td>Monday</td><td>Chest & Triceps</td></tr>
-      <tr><td>Tuesday</td><td>Back & Biceps</td></tr>
-      <tr><td>Wednesday</td><td>Legs & Cardio</td></tr>
-      <tr><td>Thursday</td><td>Shoulders & Abs</td></tr>
-      <tr><td>Friday</td><td>Core & Mobility</td></tr>
-      <tr><td>Saturday</td><td>Full Body & HIIT</td></tr>
-      <tr><td>Sunday</td><td>Rest / Stretching</td></tr>
-    </table>
-    <button id="download-pdf" class="btn">Download Plan (PDF)</button>
+  <section id="workout" class="section dark-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">TRAINING</span>
+        <h2 class="section-title">Weekly <span class="accent">Schedule</span></h2>
+        <p>Structured for maximum results</p>
+      </div>
+      <div class="schedule-grid">
+        <div class="schedule-card" data-day="MON">
+          <div class="day-num">01</div>
+          <div class="day-info">
+            <h3>Monday</h3>
+            <p>Chest & Triceps</p>
+            <div class="day-tags"><span>Push</span><span>Strength</span></div>
+          </div>
+          <div class="day-icon"><i class="fas fa-fire"></i></div>
+        </div>
+        <div class="schedule-card" data-day="TUE">
+          <div class="day-num">02</div>
+          <div class="day-info">
+            <h3>Tuesday</h3>
+            <p>Back & Biceps</p>
+            <div class="day-tags"><span>Pull</span><span>Strength</span></div>
+          </div>
+          <div class="day-icon"><i class="fas fa-fire"></i></div>
+        </div>
+        <div class="schedule-card" data-day="WED">
+          <div class="day-num">03</div>
+          <div class="day-info">
+            <h3>Wednesday</h3>
+            <p>Legs & Cardio</p>
+            <div class="day-tags"><span>Legs</span><span>Cardio</span></div>
+          </div>
+          <div class="day-icon"><i class="fas fa-bolt"></i></div>
+        </div>
+        <div class="schedule-card" data-day="THU">
+          <div class="day-num">04</div>
+          <div class="day-info">
+            <h3>Thursday</h3>
+            <p>Shoulders & Abs</p>
+            <div class="day-tags"><span>Push</span><span>Core</span></div>
+          </div>
+          <div class="day-icon"><i class="fas fa-fire"></i></div>
+        </div>
+        <div class="schedule-card" data-day="FRI">
+          <div class="day-num">05</div>
+          <div class="day-info">
+            <h3>Friday</h3>
+            <p>Core & Mobility</p>
+            <div class="day-tags"><span>Core</span><span>Flex</span></div>
+          </div>
+          <div class="day-icon"><i class="fas fa-star"></i></div>
+        </div>
+        <div class="schedule-card highlight" data-day="SAT">
+          <div class="day-num">06</div>
+          <div class="day-info">
+            <h3>Saturday</h3>
+            <p>Full Body & HIIT</p>
+            <div class="day-tags"><span>Full</span><span>HIIT</span></div>
+          </div>
+          <div class="day-icon"><i class="fas fa-bolt"></i></div>
+        </div>
+        <div class="schedule-card rest" data-day="SUN">
+          <div class="day-num">07</div>
+          <div class="day-info">
+            <h3>Sunday</h3>
+            <p>Rest & Stretching</p>
+            <div class="day-tags"><span>Rest</span><span>Recovery</span></div>
+          </div>
+          <div class="day-icon"><i class="fas fa-moon"></i></div>
+        </div>
+      </div>
+      <div class="download-wrap">
+        <button id="download-pdf" class="btn-primary">
+          <i class="fas fa-download"></i> Download Full Plan
+        </button>
+      </div>
+    </div>
   </section>
 
   <!-- Diet Section -->
-  <section id="diet">
-    <h2 class="section-title">Diet Plans</h2>
-    <div class="diet-container">
-      <div class="diet-card">
-        <h3>Weight Loss</h3>
-        <p class="short">Low carbs, High protein, Green Tea</p>
-        <p class="more">Oats, Chicken breast, Veggies, Fruits, Water intake.</p>
-        <button class="toggle-btn">Read More</button>
+  <section id="diet" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">NUTRITION</span>
+        <h2 class="section-title">Diet <span class="accent">Plans</span></h2>
+        <p>Fuel your body the right way</p>
       </div>
-      <div class="diet-card">
-        <h3>Weight Gain</h3>
-        <p class="short">High calorie meals, Protein shakes, Nuts</p>
-        <p class="more">Rice, Peanut butter, Whole milk, Red meat, Eggs.</p>
-        <button class="toggle-btn">Read More</button>
+      <div class="diet-container">
+        <div class="diet-card loss">
+          <div class="diet-icon"><i class="fas fa-fire-flame-curved"></i></div>
+          <h3>Weight Loss</h3>
+          <div class="diet-badge">Cutting</div>
+          <p class="short">Low carbs • High protein • Clean eating</p>
+          <ul class="diet-list more" style="display:none">
+            <li><i class="fas fa-check"></i> Morning: Oats + Green Tea</li>
+            <li><i class="fas fa-check"></i> Lunch: Chicken Breast + Veggies</li>
+            <li><i class="fas fa-check"></i> Snack: Fruits + Nuts</li>
+            <li><i class="fas fa-check"></i> Dinner: Salad + Eggs</li>
+            <li><i class="fas fa-check"></i> 3L+ Water Daily</li>
+          </ul>
+          <button class="toggle-btn">Read More <i class="fas fa-chevron-down"></i></button>
+        </div>
+        <div class="diet-card gain featured-diet">
+          <div class="diet-icon"><i class="fas fa-dumbbell"></i></div>
+          <h3>Weight Gain</h3>
+          <div class="diet-badge">Bulking</div>
+          <p class="short">High calories • Protein shakes • Power foods</p>
+          <ul class="diet-list more" style="display:none">
+            <li><i class="fas fa-check"></i> Morning: Rice + Eggs + Milk</li>
+            <li><i class="fas fa-check"></i> Lunch: Red Meat + Potatoes</li>
+            <li><i class="fas fa-check"></i> Snack: Peanut Butter + Banana</li>
+            <li><i class="fas fa-check"></i> Dinner: Whole Milk + Protein Shake</li>
+            <li><i class="fas fa-check"></i> 5-6 meals daily</li>
+          </ul>
+          <button class="toggle-btn">Read More <i class="fas fa-chevron-down"></i></button>
+        </div>
+        <div class="diet-card maintain">
+          <div class="diet-icon"><i class="fas fa-balance-scale"></i></div>
+          <h3>Maintenance</h3>
+          <div class="diet-badge">Balance</div>
+          <p class="short">Balanced macros • Whole foods • Consistency</p>
+          <ul class="diet-list more" style="display:none">
+            <li><i class="fas fa-check"></i> Morning: Mixed Fruit + Yogurt</li>
+            <li><i class="fas fa-check"></i> Lunch: Dal + Rice + Sabzi</li>
+            <li><i class="fas fa-check"></i> Snack: Sprouts + Nuts</li>
+            <li><i class="fas fa-check"></i> Dinner: Roti + Paneer/Chicken</li>
+            <li><i class="fas fa-check"></i> 2.5L Water Daily</li>
+          </ul>
+          <button class="toggle-btn">Read More <i class="fas fa-chevron-down"></i></button>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- BMI Calculator -->
-  <section id="bmi">
-    <h2 class="section-title">BMI Calculator</h2>
-    <div class="bmi-box">
-      <input type="number" id="weight" placeholder="Weight (kg)">
-      <input type="number" id="height" placeholder="Height (cm)">
-      <button id="calc-bmi" class="btn">Calculate</button>
-      <p id="bmi-result"></p>
+  <section id="bmi" class="section dark-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">TOOLS</span>
+        <h2 class="section-title">BMI <span class="accent">Calculator</span></h2>
+        <p>Know your body, plan your goal</p>
+      </div>
+      <div class="bmi-wrapper">
+        <div class="bmi-form">
+          <div class="input-group">
+            <label>Weight</label>
+            <div class="input-wrap">
+              <input type="number" id="weight" placeholder="70" min="1">
+              <span class="unit">KG</span>
+            </div>
+          </div>
+          <div class="input-group">
+            <label>Height</label>
+            <div class="input-wrap">
+              <input type="number" id="height" placeholder="175" min="1">
+              <span class="unit">CM</span>
+            </div>
+          </div>
+          <button id="calc-bmi" class="btn-primary full-width">Calculate BMI</button>
+        </div>
+        <div class="bmi-result-box" id="bmi-result-box" style="display:none">
+          <div class="bmi-score" id="bmi-score">--</div>
+          <div class="bmi-label" id="bmi-label">--</div>
+          <div class="bmi-bar-wrap">
+            <div class="bmi-bar">
+              <div class="bmi-indicator" id="bmi-indicator"></div>
+              <div class="bmi-zones">
+                <span>Under</span><span>Normal</span><span>Over</span><span>Obese</span>
+              </div>
+            </div>
+          </div>
+          <p class="bmi-tip" id="bmi-tip"></p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact">
-    <h2 class="section-title">Contact Us</h2>
-    <form id="contact-form">
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="email" id="email" placeholder="Email" required>
-      <textarea id="message" placeholder="Write your message..." required></textarea>
-      <button type="submit" class="btn">Send</button>
-    </form>
-    <div class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">GET IN TOUCH</span>
+        <h2 class="section-title">Contact <span class="accent">Us</span></h2>
+        <p>Ready to transform? Let's talk.</p>
+      </div>
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Location</h4>
+              <p>FitZone Gym, Main Road, Your City</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h4>Phone</h4>
+              <p>+91 98765 43210</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <h4>Hours</h4>
+              <p>Mon–Sat: 5AM – 10PM</p>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <form id="contact-form" class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" id="email" placeholder="your@email.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" placeholder="+91 00000 00000">
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea id="message" placeholder="Tell us your fitness goals..." rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary full-width">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
     </div>
   </section>
 
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <i class="fas fa-check-circle"></i>
+    <span>Message sent successfully!</span>
+  </div>
+
   <!-- Footer -->
   <footer>
-    <div class="footer-links">
-      <a href="#">Instagram</a> | <a href="#">YouTube</a> | <a href="#">Twitter</a>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo"><span class="logo-fit">FIT</span><span class="logo-zone">ZONE</span></div>
+        <p>Your journey to elite fitness starts here. Join us and transform your life.</p>
+      </div>
+      <div class="footer-links-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#workout">Workout</a></li>
+          <li><a href="#diet">Diet</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-col">
+        <h4>Follow Us</h4>
+        <ul>
+          <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+        </ul>
+      </div>
     </div>
-    <p>© 2025 FitZone | All rights reserved.</p>
+    <div class="footer-bottom">
+      <p>© 2025 FitZone | All Rights Reserved | Designed with 💪</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
